@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stratej OI — L'intelligence financière pour votre entreprise</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy: #1B4F72;
+  --navy-dark: #133A55;
+  --blue: #2E86C1;
+  --blue-light: #EBF5FB;
+  --blue-glow: #D4EFFC;
+  --orange: #E67E22;
+  --orange-light: #FEF5E7;
+  --white: #FFFFFF;
+  --gray-50: #F8F9FA;
+  --gray-100: #F1F3F5;
+  --gray-200: #E9ECEF;
+  --gray-400: #ADB5BD;
+  --gray-600: #6C757D;
+  --gray-800: #343A40;
+  --gray-900: #212529;
+  --radius: 12px;
+  --radius-lg: 16px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  color: var(--gray-900);
+  background: var(--white);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ── HERO ── */
+.hero {
+  background: linear-gradient(165deg, var(--navy) 0%, var(--navy-dark) 100%);
+  padding: 80px 24px 64px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -40%;
+  right: -20%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(46,134,193,0.15) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+.hero-logo {
+  width: 80px;
+  height: 80px;
+  background: rgba(255,255,255,0.1);
+  border-radius: var(--radius);
+  margin: 0 auto 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: rgba(255,255,255,0.5);
+  border: 1px dashed rgba(255,255,255,0.2);
+}
+
+.hero h1 {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(28px, 5vw, 44px);
+  color: var(--white);
+  font-weight: 400;
+  margin-bottom: 8px;
+  letter-spacing: -0.5px;
+}
+
+.hero .tagline {
+  font-size: clamp(15px, 2.5vw, 18px);
+  color: var(--blue-glow);
+  margin-bottom: 24px;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+.hero .tagline span {
+  margin: 0 8px;
+  opacity: 0.5;
+}
+
+.hero p {
+  font-size: 17px;
+  color: rgba(255,255,255,0.75);
+  max-width: 560px;
+  margin: 0 auto 36px;
+  line-height: 1.7;
+}
+
+.btn-primary {
+  display: inline-block;
+  background: var(--orange);
+  color: var(--white);
+  padding: 16px 36px;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background: #D35400;
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  display: inline-block;
+  background: transparent;
+  color: var(--navy);
+  padding: 14px 32px;
+  border-radius: 50px;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  border: 2px solid var(--navy);
+  transition: all 0.2s;
+}
+
+.btn-secondary:hover {
+  background: var(--navy);
+  color: var(--white);
+}
+
+.hero-sub {
+  margin-top: 16px;
+  font-size: 14px;
+  color: rgba(255,255,255,0.45);
+}
+
+/* ── SECTION COMMON ── */
+section {
+  padding: 72px 24px;
+}
+
+.section-label {
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--blue);
+  margin-bottom: 12px;
+}
+
+.section-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(24px, 4vw, 36px);
+  color: var(--navy);
+  margin-bottom: 16px;
+  font-weight: 400;
+}
+
+.section-subtitle {
+  font-size: 17px;
+  color: var(--gray-600);
+  max-width: 600px;
+  line-height: 1.7;
+}
+
+.section-subtitle.centered {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.text-center { text-align: center; }
+
+/* ── FORMULES ── */
+.formules {
+  background: var(--gray-50);
+}
+
+.formules-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-top: 48px;
+}
+
+.formule-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 36px 28px;
+  border: 1px solid var(--gray-200);
+  position: relative;
+  transition: border-color 0.2s;
+}
+
+.formule-card:hover {
+  border-color: var(--blue);
+}
+
+.formule-card.featured {
+  border: 2px solid var(--blue);
+}
+
+.formule-badge {
+  position: absolute;
+  top: -12px;
+  left: 28px;
+  background: var(--blue);
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 14px;
+  border-radius: 50px;
+}
+
+.formule-name {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 4px;
+}
+
+.formule-type {
+  font-size: 14px;
+  color: var(--gray-600);
+  margin-bottom: 20px;
+}
+
+.formule-features {
+  list-style: none;
+  margin-bottom: 24px;
+}
+
+.formule-features li {
+  padding: 8px 0;
+  font-size: 15px;
+  color: var(--gray-800);
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  line-height: 1.5;
+}
+
+.formule-features li::before {
+  content: '✓';
+  color: var(--blue);
+  font-weight: 700;
+  font-size: 14px;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+/* ── TARIFS ── */
+.tarifs-table-wrapper {
+  margin-top: 48px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.tarifs-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px;
+}
+
+.tarifs-table thead th {
+  background: var(--navy);
+  color: var(--white);
+  padding: 16px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.tarifs-table thead th:first-child {
+  text-align: left;
+  border-radius: var(--radius) 0 0 0;
+}
+
+.tarifs-table thead th:last-child {
+  border-radius: 0 var(--radius) 0 0;
+}
+
+.tarifs-table tbody td {
+  padding: 16px 20px;
+  text-align: center;
+  font-size: 15px;
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.tarifs-table tbody td:first-child {
+  text-align: left;
+  font-weight: 600;
+  color: var(--navy);
+}
+
+.tarifs-table tbody tr:hover {
+  background: var(--blue-light);
+}
+
+.tarifs-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.prix-mois {
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.prix-mois small {
+  font-weight: 400;
+  color: var(--gray-600);
+  font-size: 13px;
+}
+
+.tarifs-note {
+  margin-top: 16px;
+  font-size: 14px;
+  color: var(--gray-600);
+  text-align: center;
+}
+
+/* ── OFFRE LANCEMENT ── */
+.lancement {
+  background: linear-gradient(135deg, var(--orange-light) 0%, #FFF8F0 100%);
+  border-top: 3px solid var(--orange);
+}
+
+.lancement-box {
+  max-width: 680px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.lancement-badge {
+  display: inline-block;
+  background: var(--orange);
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 6px 20px;
+  border-radius: 50px;
+  margin-bottom: 20px;
+}
+
+.lancement-prix {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  margin: 32px 0;
+  flex-wrap: wrap;
+}
+
+.lancement-prix-item {
+  text-align: center;
+}
+
+.lancement-prix-item .ca {
+  font-size: 13px;
+  color: var(--gray-600);
+  margin-bottom: 4px;
+}
+
+.lancement-prix-item .ancien {
+  font-size: 16px;
+  color: var(--gray-400);
+  text-decoration: line-through;
+}
+
+.lancement-prix-item .nouveau {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--orange);
+}
+
+/* ── MISSIONS À LA CARTE ── */
+.carte-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.carte-item {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 24px;
+  border: 1px solid var(--gray-200);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.carte-item-name {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--gray-800);
+}
+
+.carte-item-prix {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--navy);
+  white-space: nowrap;
+}
+
+/* ── AUTOMATISATION ── */
+.auto-section {
+  background: var(--gray-50);
+}
+
+.auto-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.auto-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 32px 24px;
+  border: 1px solid var(--gray-200);
+  text-align: center;
+}
+
+.auto-card-name {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 4px;
+}
+
+.auto-card-prix {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--blue);
+  margin: 12px 0;
+}
+
+.auto-card-prix small {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--gray-600);
+}
+
+.auto-card ul {
+  list-style: none;
+  text-align: left;
+  margin-top: 16px;
+}
+
+.auto-card ul li {
+  padding: 6px 0;
+  font-size: 14px;
+  color: var(--gray-600);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.auto-card ul li::before {
+  content: '✓';
+  color: var(--blue);
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.kap-note {
+  margin-top: 32px;
+  background: var(--blue-light);
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  text-align: center;
+  font-size: 15px;
+  color: var(--navy);
+}
+
+.kap-note strong {
+  color: var(--blue);
+}
+
+/* ── CTA FINAL ── */
+.cta-final {
+  background: var(--navy);
+  text-align: center;
+  padding: 72px 24px;
+}
+
+.cta-final h2 {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(24px, 4vw, 34px);
+  color: var(--white);
+  font-weight: 400;
+  margin-bottom: 12px;
+}
+
+.cta-final p {
+  color: rgba(255,255,255,0.65);
+  font-size: 16px;
+  margin-bottom: 32px;
+}
+
+.cta-final .btn-primary {
+  margin-bottom: 16px;
+}
+
+.cta-rappel {
+  margin-top: 12px;
+}
+
+.cta-rappel a {
+  color: rgba(255,255,255,0.5);
+  font-size: 14px;
+  text-decoration: underline;
+}
+
+.cta-rappel a:hover {
+  color: rgba(255,255,255,0.75);
+}
+
+/* ── FOOTER ── */
+footer {
+  text-align: center;
+  padding: 32px 24px;
+  font-size: 13px;
+  color: var(--gray-400);
+  background: var(--gray-900);
+}
+
+footer a {
+  color: var(--gray-400);
+  text-decoration: underline;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 640px) {
+  .hero { padding: 56px 20px 48px; }
+  section { padding: 48px 16px; }
+  .formule-card { padding: 28px 20px; }
+  .lancement-prix { gap: 20px; }
+  .lancement-prix-item .nouveau { font-size: 24px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ═══ HERO ═══ -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-logo">Logo</div>
+    <h1>L'intelligence financière<br>pour votre entreprise</h1>
+    <p class="tagline">Déléguez <span>•</span> Décidez <span>•</span> Développez</p>
+    <p>Vous dirigez une TPE ou PME à La Réunion ? Vous méritez une vision claire de vos finances — sans y passer vos soirées. On pilote vos chiffres, vous pilotez votre activité.</p>
+    <a href="https://meet.brevo.com/pierre-yves-luminet/echange-decouverte-stratej-oi" class="btn-primary">Réservez votre échange découverte gratuit</a>
+    <p class="hero-sub">30 minutes · Sans engagement · Par téléphone</p>
+  </div>
+</section>
+
+<!-- ═══ FORMULES ═══ -->
+<section class="formules">
+  <div class="container text-center">
+    <p class="section-label">Nos formules</p>
+    <h2 class="section-title">Un accompagnement adapté à votre réalité</h2>
+    <p class="section-subtitle centered">Du diagnostic ponctuel au pilotage stratégique complet, choisissez la formule qui correspond à votre besoin.</p>
+
+    <div class="formules-grid">
+      <!-- Diagnostic Flash -->
+      <div class="formule-card">
+        <p class="formule-name">Diagnostic Flash</p>
+        <p class="formule-type">Ponctuel</p>
+        <ul class="formule-features">
+          <li>Analyse complète de votre rentabilité et trésorerie</li>
+          <li>Identification des leviers d'amélioration immédiats</li>
+          <li>Rapport détaillé avec plan d'action chiffré</li>
+          <li>Restitution en visio ou en présentiel</li>
+        </ul>
+      </div>
+
+      <!-- Pilotage -->
+      <div class="formule-card featured">
+        <span class="formule-badge">Le plus choisi</span>
+        <p class="formule-name">Formule Pilotage</p>
+        <p class="formule-type">Mensuel</p>
+        <ul class="formule-features">
+          <li>Tableau de bord financier mis à jour mensuellement</li>
+          <li>Prévisionnel de trésorerie glissant à 3 mois</li>
+          <li>Alertes automatiques sur indicateurs critiques</li>
+          <li>1 point mensuel de pilotage (30 min)</li>
+          <li>Recommandations d'optimisation continues</li>
+        </ul>
+      </div>
+
+      <!-- Stratégie -->
+      <div class="formule-card">
+        <p class="formule-name">Formule Stratégie</p>
+        <p class="formule-type">Mensuel</p>
+        <ul class="formule-features">
+          <li>Tout le contenu Pilotage inclus</li>
+          <li>Prévisionnel de trésorerie étendu à 6 mois</li>
+          <li>Simulations d'impact avant chaque décision clé</li>
+          <li>Préparation des rendez-vous bancaires</li>
+          <li>1 point mensuel structuré (1h30)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ GRILLE TARIFAIRE ═══ -->
+<section>
+  <div class="container text-center">
+    <p class="section-label">Tarifs</p>
+    <h2 class="section-title">Des tarifs clairs, adaptés à votre taille</h2>
+    <p class="section-subtitle centered">Pas de surprise, pas de devis mystère. Votre tarif dépend de votre chiffre d'affaires annuel.</p>
+
+    <div class="tarifs-table-wrapper">
+      <table class="tarifs-table">
+        <thead>
+          <tr>
+            <th>Votre CA annuel</th>
+            <th>Diagnostic Flash</th>
+            <th>Pilotage</th>
+            <th>Stratégie</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>&lt; 200 k€</td>
+            <td class="prix-mois">650 €</td>
+            <td class="prix-mois">320 € <small>/ mois</small></td>
+            <td class="prix-mois">590 € <small>/ mois</small></td>
+          </tr>
+          <tr>
+            <td>200 k€ – 500 k€</td>
+            <td class="prix-mois">950 €</td>
+            <td class="prix-mois">390 € <small>/ mois</small></td>
+            <td class="prix-mois">750 € <small>/ mois</small></td>
+          </tr>
+          <tr>
+            <td>500 k€ – 800 k€</td>
+            <td class="prix-mois">1 400 €</td>
+            <td class="prix-mois">590 € <small>/ mois</small></td>
+            <td class="prix-mois">950 € <small>/ mois</small></td>
+          </tr>
+          <tr>
+            <td>&gt; 800 k€</td>
+            <td class="prix-mois">Sur devis</td>
+            <td class="prix-mois">Sur devis</td>
+            <td class="prix-mois">Sur devis</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="tarifs-note">Durée minimale de 3 mois — le temps nécessaire pour mettre en place un accompagnement de qualité, adapté à votre activité · Prélèvement SEPA mensuel automatique</p>
+  </div>
+</section>
+
+<!-- ═══ OFFRE LANCEMENT ═══ -->
+<section class="lancement">
+  <div class="lancement-box">
+    <span class="lancement-badge">Offre de lancement · 10 premiers clients</span>
+    <h2 class="section-title">-20 % sur votre Diagnostic Flash</h2>
+    <p class="section-subtitle" style="margin: 0 auto;">Vous faites partie des premiers à nous faire confiance ? On vous offre une remise immédiate sur votre diagnostic.</p>
+
+    <div class="lancement-prix">
+      <div class="lancement-prix-item">
+        <p class="ca">&lt; 200 k€ CA</p>
+        <p class="ancien">650 €</p>
+        <p class="nouveau">520 €</p>
+      </div>
+      <div class="lancement-prix-item">
+        <p class="ca">200 – 500 k€ CA</p>
+        <p class="ancien">950 €</p>
+        <p class="nouveau">760 €</p>
+      </div>
+      <div class="lancement-prix-item">
+        <p class="ca">500 – 800 k€ CA</p>
+        <p class="ancien">1 400 €</p>
+        <p class="nouveau">1 120 €</p>
+      </div>
+    </div>
+
+    <a href="https://meet.brevo.com/pierre-yves-luminet/echange-decouverte-stratej-oi" class="btn-primary">J'en profite — Réserver mon créneau</a>
+  </div>
+</section>
+
+<!-- ═══ MISSIONS À LA CARTE ═══ -->
+<section>
+  <div class="container">
+    <div class="text-center">
+      <p class="section-label">Missions à la carte</p>
+      <h2 class="section-title">Des interventions ponctuelles selon vos besoins</h2>
+      <p class="section-subtitle centered">En complément de votre formule ou en mission ponctuelle.</p>
+    </div>
+
+    <div class="carte-grid">
+      <div class="carte-item">
+        <p class="carte-item-name">Montage dossier de financement<br><small style="font-weight:400;color:var(--gray-600);">BPI, banque, Kap Numérik</small></p>
+        <p class="carte-item-prix">250 – 400 €</p>
+      </div>
+      <div class="carte-item">
+        <p class="carte-item-name">Préparation dossier subvention<br><small style="font-weight:400;color:var(--gray-600);">FEDER, aides régionales</small></p>
+        <p class="carte-item-prix">300 – 500 €</p>
+      </div>
+      <div class="carte-item">
+        <p class="carte-item-name">Business plan / prévisionnel<br><small style="font-weight:400;color:var(--gray-600);">Création ou reprise d'entreprise</small></p>
+        <p class="carte-item-prix">400 – 600 €</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ AUTOMATISATION ═══ -->
+<section class="auto-section">
+  <div class="container text-center">
+    <p class="section-label">Automatisation</p>
+    <h2 class="section-title">Gagnez du temps sur vos tâches répétitives</h2>
+    <p class="section-subtitle centered">Offre indépendante, combinable avec le pilotage financier.</p>
+
+    <div class="auto-grid">
+      <div class="auto-card">
+        <p class="auto-card-name">Starter</p>
+        <p class="auto-card-prix">650 €</p>
+        <ul>
+          <li>2 scénarios livrés</li>
+          <li>Formation 1h en visio</li>
+          <li>Pas de maintenance</li>
+        </ul>
+      </div>
+      <div class="auto-card" style="border-color:var(--blue);">
+        <p class="auto-card-name">Business</p>
+        <p class="auto-card-prix">1 100 € <small>+ 150 €/mois</small></p>
+        <ul>
+          <li>4 scénarios livrés</li>
+          <li>Formation 2h en visio</li>
+          <li>Maintenance incluse</li>
+        </ul>
+      </div>
+      <div class="auto-card">
+        <p class="auto-card-name">Premium</p>
+        <p class="auto-card-prix">1 700 € <small>+ 200 €/mois</small></p>
+        <ul>
+          <li>6+ scénarios livrés</li>
+          <li>Formation sur site</li>
+          <li>Maintenance incluse</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="kap-note">
+      <strong>Financement Kap Numérik :</strong> jusqu'à 80 % de prise en charge. Accompagnement au montage du dossier inclus.
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CTA FINAL ═══ -->
+<section class="cta-final">
+  <div class="container">
+    <h2>Prêt à reprendre le contrôle<br>de vos finances ?</h2>
+    <p>30 minutes d'échange gratuit pour faire le point sur votre situation.</p>
+    <a href="https://meet.brevo.com/pierre-yves-luminet/echange-decouverte-stratej-oi" class="btn-primary">Réservez votre échange découverte</a>
+    <div class="cta-rappel">
+      <a href="https://bit.ly/3PYsiNY">Vous préférez qu'on vous rappelle ? Laissez vos coordonnées ici.</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  <p>© 2026 Stratej OI · La Réunion · <a href="/cdn-cgi/l/email-protection#aecdc1c0dacfcddaeedddadccfdacbc4c1c780dccb"><span class="
