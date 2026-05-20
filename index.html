@@ -229,6 +229,56 @@ section {
   }
 }
 
+/* ── POUR QUI ── */
+.pour-qui-section {
+  background: var(--white);
+}
+
+.pour-qui-content {
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.pour-qui-intro {
+  font-size: 17px;
+  color: var(--gray-800);
+  margin-bottom: 28px;
+  line-height: 1.7;
+}
+
+.pour-qui-list {
+  list-style: none;
+  text-align: left;
+  max-width: 620px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.pour-qui-list li {
+  padding: 12px 0;
+  font-size: 16px;
+  color: var(--gray-800);
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  line-height: 1.6;
+  border-bottom: 1px solid var(--gray-100);
+}
+
+.pour-qui-list li:last-child {
+  border-bottom: none;
+}
+
+.pour-qui-list li::before {
+  content: '→';
+  color: var(--blue);
+  font-weight: 600;
+  font-size: 16px;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
 /* ── FORMULES ── */
 .formules {
   background: var(--gray-50);
@@ -694,6 +744,24 @@ footer a {
   </div>
 </section>
 
+<!-- ═══ POUR QUI ═══ -->
+<section class="pour-qui-section">
+  <div class="container">
+    <div class="pour-qui-content">
+      <p class="section-label">Pour qui ?</p>
+      <h2 class="section-title">Cet accompagnement est fait pour vous si…</h2>
+      <p class="pour-qui-intro">Vous dirigez une TPE ou PME à La Réunion et vous souhaitez :</p>
+      <ul class="pour-qui-list">
+        <li>Mieux anticiper votre trésorerie.</li>
+        <li>Comprendre où se fait réellement votre rentabilité.</li>
+        <li>Préparer une décision importante : embauche, investissement, financement, développement.</li>
+        <li>Dialoguer plus sereinement avec votre banque.</li>
+        <li>Gagner du temps sur le suivi de vos chiffres, sans perdre la maîtrise de vos décisions.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
 <!-- ═══ FORMULES ═══ -->
 <section class="formules">
   <div class="container text-center">
@@ -820,7 +888,7 @@ footer a {
   <div class="lancement-box">
     <span class="lancement-badge">Offre fondateur</span>
     <h2 class="section-title">-20 % sur votre Diagnostic Flash</h2>
-    <p class="section-subtitle" style="margin: 0 auto;">Pour vous accueillir, une remise immédiate sur votre Diagnostic Flash.</p>
+    <p class="section-subtitle" style="margin: 0 auto;">Une remise immédiate sur votre Diagnostic Flash, pour commencer avec une vision claire de votre situation.</p>
 
     <div class="lancement-prix">
       <div class="lancement-prix-item">
@@ -863,7 +931,7 @@ footer a {
         <p class="carte-item-prix">600 – 1 200 €</p>
       </div>
       <div class="carte-item">
-        <p class="carte-item-name">Étude d'automatisation<br><small style="font-weight:400;color:var(--gray-600);">Identification de 2 à 3 tâches répétitives à automatiser, recommandations d'outils et estimation du gain de temps</small></p>
+        <p class="carte-item-name">Étude d'automatisation de vos données et suivis financiers<br><small style="font-weight:400;color:var(--gray-600);">Identification de 2 à 3 tâches répétitives à automatiser : collecte de données, reporting, relances, suivi de trésorerie, tableaux de bord</small></p>
         <p class="carte-item-prix">Sur devis</p>
       </div>
     </div>
