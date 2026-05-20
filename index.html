@@ -280,7 +280,30 @@ section {
 .formule-type {
   font-size: 14px;
   color: var(--gray-600);
+  margin-bottom: 12px;
+}
+
+.formule-price {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--navy);
   margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--gray-100);
+}
+
+.formule-price .from {
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--gray-600);
+  display: block;
+  margin-bottom: 2px;
+}
+
+.formule-price small {
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--gray-600);
 }
 
 .formule-features {
@@ -683,6 +706,7 @@ footer a {
       <div class="formule-card">
         <p class="formule-name">Diagnostic Flash</p>
         <p class="formule-type">Ponctuel</p>
+        <p class="formule-price"><span class="from">À partir de</span>650 €</p>
         <ul class="formule-features">
           <li>Analyse complète de votre rentabilité et trésorerie</li>
           <li>Identification des leviers d'amélioration immédiats</li>
@@ -696,6 +720,7 @@ footer a {
         <span class="formule-badge">Le plus choisi</span>
         <p class="formule-name">Formule Pilotage</p>
         <p class="formule-type">Mensuel</p>
+        <p class="formule-price"><span class="from">À partir de</span>320 € <small>/ mois</small></p>
         <ul class="formule-features">
           <li>
             <div>
@@ -716,6 +741,7 @@ footer a {
       <div class="formule-card">
         <p class="formule-name">Formule Stratégie</p>
         <p class="formule-type">Mensuel</p>
+        <p class="formule-price"><span class="from">À partir de</span>590 € <small>/ mois</small></p>
         <ul class="formule-features">
           <li>
             <div>
@@ -784,7 +810,8 @@ footer a {
         </tbody>
       </table>
     </div>
-    <p class="tarifs-note">Durée minimale de 3 mois — le temps nécessaire pour mettre en place un accompagnement de qualité, adapté à votre activité · Prélèvement SEPA mensuel automatique</p>
+    <p class="tarifs-note">Durée minimale de 3 mois — le temps nécessaire pour mettre en place un accompagnement de qualité, adapté à votre activité · Prélèvement SEPA mensuel automatique · TVA non applicable, art. 293 B du CGI</p>
+    <p class="tarifs-note" style="margin-top: 12px; font-style: italic;">Le périmètre exact de l'accompagnement est défini lors du diagnostic initial, selon votre activité, vos données disponibles et vos priorités.</p>
   </div>
 </section>
 
@@ -828,12 +855,12 @@ footer a {
 
     <div class="carte-grid">
       <div class="carte-item">
-        <p class="carte-item-name">Montage dossier de financement</p>
-        <p class="carte-item-prix">250 – 400 €</p>
+        <p class="carte-item-name">Montage dossier de financement<br><small style="font-weight:400;color:var(--gray-600);">Selon complexité</small></p>
+        <p class="carte-item-prix">400 – 800 €</p>
       </div>
       <div class="carte-item">
-        <p class="carte-item-name">Business plan / prévisionnel<br><small style="font-weight:400;color:var(--gray-600);">Création ou reprise d'entreprise</small></p>
-        <p class="carte-item-prix">400 – 600 €</p>
+        <p class="carte-item-name">Business plan / prévisionnel<br><small style="font-weight:400;color:var(--gray-600);">Création ou reprise d'entreprise — selon complexité</small></p>
+        <p class="carte-item-prix">600 – 1 200 €</p>
       </div>
       <div class="carte-item">
         <p class="carte-item-name">Étude d'automatisation<br><small style="font-weight:400;color:var(--gray-600);">Identification de 2 à 3 tâches répétitives à automatiser, recommandations d'outils et estimation du gain de temps</small></p>
@@ -857,7 +884,11 @@ footer a {
 
 <!-- ═══ FOOTER ═══ -->
 <footer>
-  <p>© 2026 Stratej OI · La Réunion · <a href="/cdn-cgi/l/email-protection#aecdc1c0dacfcddaeedddadccfdacbc4c1c780dccb"><span class="__cf_email__" data-cfemail="aecdc1c0dacfcddaeedddadccfdacbc4c1c780dccb">[email&#160;protected]</span></a></p>
+  <p>© 2026 Stratej OI · La Réunion · <a href="mailto:contact@stratejoi.re">contact@stratejoi.re</a></p>
+  <p style="margin-top: 8px;">
+    <a href="mentions-legales.html" style="color: var(--gray-400); text-decoration: underline; margin: 0 8px;">Mentions légales</a>·
+    <a href="politique-confidentialite.html" style="color: var(--gray-400); text-decoration: underline; margin: 0 8px;">Politique de confidentialité</a>
+  </p>
 </footer>
 
 </body>
