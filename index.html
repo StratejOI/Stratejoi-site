@@ -734,6 +734,12 @@ footer a {
     border-bottom: 1px solid var(--gray-100);
     text-align: left;
   }
+  .tarifs-table tbody td:not(:first-child) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    align-items: center;
+  }
   .tarifs-table tbody td:first-child {
     display: flex;
     flex-direction: column;
