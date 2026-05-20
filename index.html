@@ -700,6 +700,70 @@ footer a {
   .formule-card { padding: 28px 20px; }
   .lancement-prix { gap: 20px; }
   .lancement-prix-item .nouveau { font-size: 24px; }
+
+  /* Tableau tarifaire → cartes empilées sur mobile */
+  .tarifs-table-wrapper {
+    overflow-x: visible;
+  }
+  .tarifs-table {
+    min-width: 0;
+    display: block;
+  }
+  .tarifs-table thead {
+    display: none;
+  }
+  .tarifs-table tbody {
+    display: block;
+  }
+  .tarifs-table tbody tr {
+    display: block;
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius);
+    margin-bottom: 16px;
+    padding: 16px 20px;
+  }
+  .tarifs-table tbody tr:hover {
+    background: var(--white);
+  }
+  .tarifs-table tbody td {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--gray-100);
+    text-align: left;
+  }
+  .tarifs-table tbody td:first-child {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--navy);
+    padding-bottom: 12px;
+    margin-bottom: 4px;
+    border-bottom: 2px solid var(--blue-light);
+  }
+  .tarifs-table tbody td:first-child::before {
+    content: 'Votre CA annuel';
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--gray-600);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+  }
+  .tarifs-table tbody td:not(:first-child)::before {
+    content: attr(data-label);
+    font-size: 14px;
+    color: var(--gray-600);
+    font-weight: 500;
+  }
+  .tarifs-table tbody td:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
 }
 </style>
 </head>
@@ -853,27 +917,27 @@ footer a {
         <tbody>
           <tr>
             <td>&lt; 200 k€</td>
-            <td class="prix-mois">650 €</td>
-            <td class="prix-mois">320 € <small>/ mois</small></td>
-            <td class="prix-mois">590 € <small>/ mois</small></td>
+            <td class="prix-mois" data-label="Diagnostic Flash">650 €</td>
+            <td class="prix-mois" data-label="Pilotage">320 € <small>/ mois</small></td>
+            <td class="prix-mois" data-label="Stratégie">590 € <small>/ mois</small></td>
           </tr>
           <tr>
             <td>200 k€ – 500 k€</td>
-            <td class="prix-mois">950 €</td>
-            <td class="prix-mois">390 € <small>/ mois</small></td>
-            <td class="prix-mois">750 € <small>/ mois</small></td>
+            <td class="prix-mois" data-label="Diagnostic Flash">950 €</td>
+            <td class="prix-mois" data-label="Pilotage">390 € <small>/ mois</small></td>
+            <td class="prix-mois" data-label="Stratégie">750 € <small>/ mois</small></td>
           </tr>
           <tr>
             <td>500 k€ – 800 k€</td>
-            <td class="prix-mois">1 400 €</td>
-            <td class="prix-mois">590 € <small>/ mois</small></td>
-            <td class="prix-mois">950 € <small>/ mois</small></td>
+            <td class="prix-mois" data-label="Diagnostic Flash">1 400 €</td>
+            <td class="prix-mois" data-label="Pilotage">590 € <small>/ mois</small></td>
+            <td class="prix-mois" data-label="Stratégie">950 € <small>/ mois</small></td>
           </tr>
           <tr>
             <td>&gt; 800 k€</td>
-            <td class="prix-mois">Sur devis</td>
-            <td class="prix-mois">Sur devis</td>
-            <td class="prix-mois">Sur devis</td>
+            <td class="prix-mois" data-label="Diagnostic Flash">Sur devis</td>
+            <td class="prix-mois" data-label="Pilotage">Sur devis</td>
+            <td class="prix-mois" data-label="Stratégie">Sur devis</td>
           </tr>
         </tbody>
       </table>
@@ -961,4 +1025,3 @@ footer a {
 
 </body>
 </html>
-                    
