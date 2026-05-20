@@ -185,6 +185,50 @@ section {
 
 .text-center { text-align: center; }
 
+/* ── À PROPOS / FONDATEUR ── */
+.about-section {
+  background: var(--blue-light);
+}
+
+.about-content {
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-name {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(24px, 4vw, 32px);
+  color: var(--navy);
+  font-weight: 400;
+  margin-bottom: 28px;
+}
+
+.about-text {
+  font-size: 17px;
+  color: var(--gray-800);
+  line-height: 1.8;
+  margin-bottom: 18px;
+  text-align: left;
+}
+
+.about-text:last-child {
+  margin-bottom: 0;
+}
+
+.about-text strong {
+  color: var(--navy);
+}
+
+@media (min-width: 640px) {
+  .about-content {
+    text-align: center;
+  }
+  .about-text {
+    text-align: center;
+  }
+}
+
 /* ── FORMULES ── */
 .formules {
   background: var(--gray-50);
@@ -252,6 +296,7 @@ section {
   align-items: flex-start;
   gap: 10px;
   line-height: 1.5;
+  text-align: left;
 }
 
 .formule-features li::before {
@@ -260,6 +305,33 @@ section {
   font-weight: 700;
   font-size: 14px;
   margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.formule-sublist {
+  list-style: none;
+  margin-top: 8px;
+  padding-left: 0;
+  width: 100%;
+}
+
+.formule-features .formule-sublist li {
+  padding: 4px 0;
+  font-size: 14px;
+  color: var(--gray-600);
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  text-align: left;
+  line-height: 1.5;
+}
+
+.formule-features .formule-sublist li::before {
+  content: '–';
+  color: var(--gray-400);
+  font-weight: 400;
+  font-size: 14px;
+  margin-top: 0;
   flex-shrink: 0;
 }
 
@@ -586,6 +658,19 @@ footer a {
   </div>
 </section>
 
+<!-- ═══ À PROPOS / FONDATEUR ═══ -->
+<section class="about-section">
+  <div class="container">
+    <div class="about-content">
+      <p class="section-label">Le fondateur</p>
+      <h2 class="about-name">Pierre-Yves Luminet</h2>
+      <p class="about-text">Après plusieurs années en banque à La Réunion, auprès des particuliers puis des professionnels, j'ai créé Stratej OI avec une conviction simple : les dirigeants de TPE et PME ont besoin d'une finance lisible et utile à la décision.</p>
+      <p class="about-text">À La Réunion, le pilotage financier ne se résume pas à des ratios. Il dépend aussi des réalités du territoire — insularité, saisonnalité, délais de paiement, dépendance aux importations ou à la commande publique. Comprendre ces réalités change la lecture des chiffres.</p>
+      <p class="about-text"><strong>Ma mission : vous rendre les clés du camion.</strong> Pour que vos chiffres redeviennent à votre service et que vous puissiez vous concentrer sur votre cœur de métier.</p>
+    </div>
+  </div>
+</section>
+
 <!-- ═══ FORMULES ═══ -->
 <section class="formules">
   <div class="container text-center">
@@ -612,11 +697,18 @@ footer a {
         <p class="formule-name">Formule Pilotage</p>
         <p class="formule-type">Mensuel</p>
         <ul class="formule-features">
-          <li>Tableau de bord financier mis à jour mensuellement</li>
-          <li>Prévisionnel de trésorerie glissant à 3 mois</li>
-          <li>Alertes automatiques sur indicateurs critiques</li>
-          <li>1 point mensuel de pilotage (30 min)</li>
+          <li>
+            <div>
+              Tableau de bord en ligne, adapté à votre secteur d'activité, incluant :
+              <ul class="formule-sublist">
+                <li>Vue d'ensemble (indicateurs principaux)</li>
+                <li>Prévisionnel de trésorerie glissant à 3 mois</li>
+                <li>Alertes automatiques sur indicateurs critiques</li>
+              </ul>
+            </div>
+          </li>
           <li>Recommandations d'optimisation continues</li>
+          <li>1 point mensuel de pilotage (30 min)</li>
         </ul>
       </div>
 
@@ -625,10 +717,21 @@ footer a {
         <p class="formule-name">Formule Stratégie</p>
         <p class="formule-type">Mensuel</p>
         <ul class="formule-features">
-          <li>Tout le contenu Pilotage inclus</li>
-          <li>Prévisionnel de trésorerie étendu à 6 mois</li>
-          <li>Simulations d'impact avant chaque décision clé</li>
-          <li>Préparation des rendez-vous bancaires</li>
+          <li>
+            <div>
+              Tableau de bord complet, adapté à votre secteur d'activité, incluant :
+              <ul class="formule-sublist">
+                <li>Vue d'ensemble (indicateurs principaux)</li>
+                <li>Prévisionnel de trésorerie étendu à 6 mois</li>
+                <li>Alertes automatiques sur indicateurs critiques</li>
+                <li>Rentabilité approfondie (par chantier, client, poste de dépense)</li>
+                <li>Simulations d'impact pour vos décisions et imprévus (investissement, embauche, perte d'un client clé…)</li>
+              </ul>
+            </div>
+          </li>
+          <li>Recommandations d'optimisation continues</li>
+          <li>Préparation des dossiers de financement et accompagnement de vos rendez-vous bancaires (vision côté banquier)</li>
+          <li>Veille territoriale : commande publique et dispositifs d'aide (communes, intercommunalités, Département, Région, BPI, FEDER)</li>
           <li>1 point mensuel structuré (1h30)</li>
         </ul>
       </div>
@@ -688,9 +791,9 @@ footer a {
 <!-- ═══ OFFRE LANCEMENT ═══ -->
 <section class="lancement">
   <div class="lancement-box">
-    <span class="lancement-badge">Offre de lancement · 10 premiers clients</span>
+    <span class="lancement-badge">Offre fondateur</span>
     <h2 class="section-title">-20 % sur votre Diagnostic Flash</h2>
-    <p class="section-subtitle" style="margin: 0 auto;">Vous faites partie des premiers à nous faire confiance ? On vous offre une remise immédiate sur votre diagnostic.</p>
+    <p class="section-subtitle" style="margin: 0 auto;">Pour vous accueillir, une remise immédiate sur votre Diagnostic Flash.</p>
 
     <div class="lancement-prix">
       <div class="lancement-prix-item">
@@ -725,60 +828,17 @@ footer a {
 
     <div class="carte-grid">
       <div class="carte-item">
-        <p class="carte-item-name">Montage dossier de financement<br><small style="font-weight:400;color:var(--gray-600);">BPI, banque, Kap Numérik</small></p>
+        <p class="carte-item-name">Montage dossier de financement</p>
         <p class="carte-item-prix">250 – 400 €</p>
-      </div>
-      <div class="carte-item">
-        <p class="carte-item-name">Préparation dossier subvention<br><small style="font-weight:400;color:var(--gray-600);">FEDER, aides régionales</small></p>
-        <p class="carte-item-prix">300 – 500 €</p>
       </div>
       <div class="carte-item">
         <p class="carte-item-name">Business plan / prévisionnel<br><small style="font-weight:400;color:var(--gray-600);">Création ou reprise d'entreprise</small></p>
         <p class="carte-item-prix">400 – 600 €</p>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ AUTOMATISATION ═══ -->
-<section class="auto-section">
-  <div class="container text-center">
-    <p class="section-label">Automatisation</p>
-    <h2 class="section-title">Gagnez du temps sur vos tâches répétitives</h2>
-    <p class="section-subtitle centered">Offre indépendante, combinable avec le pilotage financier.</p>
-
-    <div class="auto-grid">
-      <div class="auto-card">
-        <p class="auto-card-name">Starter</p>
-        <p class="auto-card-prix">650 €</p>
-        <ul>
-          <li>2 scénarios livrés</li>
-          <li>Formation 1h en visio</li>
-          <li>Pas de maintenance</li>
-        </ul>
+      <div class="carte-item">
+        <p class="carte-item-name">Étude d'automatisation<br><small style="font-weight:400;color:var(--gray-600);">Identification de 2 à 3 tâches répétitives à automatiser, recommandations d'outils et estimation du gain de temps</small></p>
+        <p class="carte-item-prix">Sur devis</p>
       </div>
-      <div class="auto-card" style="border-color:var(--blue);">
-        <p class="auto-card-name">Business</p>
-        <p class="auto-card-prix">1 100 € <small>+ 150 €/mois</small></p>
-        <ul>
-          <li>4 scénarios livrés</li>
-          <li>Formation 2h en visio</li>
-          <li>Maintenance incluse</li>
-        </ul>
-      </div>
-      <div class="auto-card">
-        <p class="auto-card-name">Premium</p>
-        <p class="auto-card-prix">1 700 € <small>+ 200 €/mois</small></p>
-        <ul>
-          <li>6+ scénarios livrés</li>
-          <li>Formation sur site</li>
-          <li>Maintenance incluse</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="kap-note">
-      <strong>Financement Kap Numérik :</strong> jusqu'à 80 % de prise en charge. Accompagnement au montage du dossier inclus.
     </div>
   </div>
 </section>
@@ -797,4 +857,8 @@ footer a {
 
 <!-- ═══ FOOTER ═══ -->
 <footer>
-  <p>© 2026 Stratej OI · La Réunion · <a href="/cdn-cgi/l/email-protection#aecdc1c0dacfcddaeedddadccfdacbc4c1c780dccb"><span class="
+  <p>© 2026 Stratej OI · La Réunion · <a href="/cdn-cgi/l/email-protection#aecdc1c0dacfcddaeedddadccfdacbc4c1c780dccb"><span class="__cf_email__" data-cfemail="aecdc1c0dacfcddaeedddadccfdacbc4c1c780dccb">[email&#160;protected]</span></a></p>
+</footer>
+
+</body>
+</html>
