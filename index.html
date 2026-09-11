@@ -742,7 +742,11 @@ footer a {
 /* Charte Stratej OI v10, 11/07/2026 */
 body{font-family:'Poppins',Arial,sans-serif}
 h1,h2,.section-title,.about-name{font-family:'Poppins',Arial,sans-serif;font-weight:500}
-.hero{background:#101E33;padding-top:38px}
+/* User's existing visual references, supplied 11/09/2026: petroleum-blue gradient. */
+:root{--brand-gradient:linear-gradient(135deg,#0F293A 0%,#1A445C 50%,#25617D 100%)}
+.hero{background:var(--brand-gradient);padding-top:38px}
+.cta-final{background:var(--brand-gradient)}
+footer{background:#102C3E}
 .hero::before{display:none}
 .hero-brand{position:relative;max-width:560px;margin:0 auto 24px}
 .hero-brand img{display:block;width:100%;height:auto}
