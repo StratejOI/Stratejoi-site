@@ -763,23 +763,73 @@ footer{background:#102C3E}
 @media(max-width:640px){.hero{padding:22px 16px 32px}.hero .hero-brand{margin-bottom:20px!important;max-width:390px}.hero h1{font-size:27px}.brand img{width:185px}.topbar{gap:12px}.back{font-size:12px;max-width:95px}h1{font-size:30px}h2{font-size:26px}}
 @media(max-width:350px){.brand img{width:165px}.hero h1{font-size:25px}}
 
+
+/* Photographies du shooting : illustrations de l'approche, septembre 2026. */
+.photo-frame{margin:0;min-width:0;overflow:hidden;border-radius:16px;background:#e3e9ea}
+.photo-frame img{display:block;width:100%;height:auto}
+.hero-layout{display:grid;grid-template-columns:1.05fr 1fr;gap:40px;align-items:center;text-align:left}
+.hero-copy{min-width:0}
+.hero .hero-brand{max-width:400px;margin:0 0 28px}
+.hero .hero-copy p{margin-left:0;margin-right:0}
+.hero .hero-copy h1{font-size:clamp(28px,3.1vw,40px)}
+.hero .hero-copy .hero-links{justify-content:flex-start;gap:12px 20px}
+.hero .hero-copy .btn-primary{padding:15px 24px;font-size:15px;text-align:center}
+.hero-photo{box-shadow:0 20px 48px #071b2b40;border:1px solid #ffffff26}
+.photo-split{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.pour-qui-content{max-width:none;text-align:left}
+.pour-qui-list{max-width:none}
+.about-layout{display:grid;grid-template-columns:300px minmax(0,1fr);gap:56px;align-items:center}
+.about-content{max-width:none;text-align:left}
+.about-content .about-text{text-align:left;font-size:16px}
+.about-content .about-name{margin-bottom:12px}
+.about-content .local-contact{margin:0 0 24px}
+.founder-photo img{aspect-ratio:4/5;object-fit:cover;object-position:center 30%}
+.offer-intro{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;text-align:left}
+.offer-intro .section-subtitle{margin:0;text-align:left}
+.contact-layout{display:grid;grid-template-columns:280px minmax(0,1fr);gap:56px;max-width:920px;align-items:center;text-align:left}
+.contact-photo{box-shadow:0 16px 40px #071b2b30}
+.contact-copy .section-label{color:#C6CCD6;margin-bottom:12px}
+.contact-copy .cta-rappel{margin-top:8px}
+.contact-copy .cta-rappel a{color:#d5e1e7}
+@media(max-width:1000px) and (min-width:761px){.hero-layout,.photo-split,.offer-intro{gap:28px}.about-layout{grid-template-columns:260px minmax(0,1fr);gap:32px}.hero .hero-copy h1{font-size:31px}.hero .hero-copy .btn-primary{padding:14px 18px}}
+@media(max-width:760px){
+ .container{padding-left:0;padding-right:0}
+ .hero-layout,.photo-split,.about-layout,.offer-intro,.contact-layout{grid-template-columns:minmax(0,1fr);gap:28px}
+ .hero-layout{text-align:left}.hero .hero-brand{max-width:360px;margin:0 auto 24px}
+ .hero .hero-copy h1{font-size:clamp(25px,6vw,34px)}
+ .hero-photo{max-width:580px;width:100%;margin:0 auto}
+ .hero .hero-copy .hero-links{gap:12px 16px}
+ .hero .hero-copy .btn-primary{width:100%;padding:14px 16px}
+ .photo-split .photo-frame{order:2}
+ .about-layout .founder-photo{max-width:280px;width:100%;margin:0 auto}
+ .about-content .about-name{font-size:27px}
+ .about-content .about-text{font-size:16px}
+ .offer-intro .photo-frame{order:2}
+ .contact-layout{text-align:center}.contact-photo{width:240px;margin:0 auto}
+ .contact-copy .btn-primary{max-width:100%;padding:15px 20px;font-size:15px}
+}
+
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://stratejoi.re/#organization", "name": "Stratej OI", "url": "https://stratejoi.re/", "description": "Conseil en pilotage financier pour TPE et PME à La Réunion", "email": "contact@stratejoi.re", "telephone": "+262693909501", "founder": {"@id": "https://stratejoi.re/#pierre-yves-luminet"}, "location": {"@type": "Place", "name": "Le Port, La Réunion"}, "areaServed": {"@type": "Place", "name": "La Réunion"}, "logo": "https://stratejoi.re/exemples/assets/stratej-oi-logo-vertical.png"}, {"@type": "Person", "@id": "https://stratejoi.re/#pierre-yves-luminet", "name": "Pierre-Yves Luminet", "url": "https://stratejoi.re/#a-propos", "worksFor": {"@id": "https://stratejoi.re/#organization"}}, {"@type": "WebPage", "@id": "https://stratejoi.re/#webpage", "url": "https://stratejoi.re/", "name": "Pilotage financier TPE et PME à La Réunion | Stratej OI", "description": "Pilotage financier pour TPE et PME à La Réunion : diagnostic, tableau de bord et accompagnement mensuel de votre trésorerie et rentabilité : commerce, BTP, café-hôtel-restaurant.", "inLanguage": "fr-FR", "publisher": {"@id": "https://stratejoi.re/#organization"}, "about": {"@id": "https://stratejoi.re/#organization"}}]}</script><meta name="robots" content="index,follow,max-image-preview:large"><meta property="og:image" content="https://stratejoi.re/exemples/assets/stratej-oi-partage.png"><meta property="og:image:alt" content="Stratej OI - Pilotage financier des TPE et PME à La Réunion"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://stratejoi.re/exemples/assets/stratej-oi-partage.png"></head>
 <body>
 <!-- ═══ HERO ═══ -->
 <section class="hero">
-  <div class="container">
+  <div class="container hero-layout">
+    <div class="hero-copy">
     <div class="hero-brand"><img src="exemples/assets/stratej-oi-logo-sombre.png" width="4200" height="1320" alt="STRATEJ OI — L’intelligence financière pour TPE &amp; PME. Déléguez, décidez, développez." fetchpriority="high"></div>
     <h1>Pilotage financier pour TPE et PME<br>à La Réunion</h1>
     <p class="hero-position">Comprendre vos chiffres, anticiper et décider avec confiance.</p>
     <p>Une vision claire de votre trésorerie, de vos marges et des décisions à préparer. On pilote vos chiffres, vous pilotez votre activité.</p>
     <a href="https://meet.brevo.com/pierre-yves-luminet/echange-decouverte-stratej-oi" class="btn-primary">Réservez votre échange découverte gratuit</a>
     <p class="hero-sub">30 minutes · Sans engagement · Par téléphone</p><a class="hero-examples" href="#exemples">Voir des exemples de livrables</a><nav class="hero-links" aria-label="Accès directs"><a href="#offres">Formules et tarifs</a><a href="analyse-financiere-reunion.html">Analyse financière</a><a href="#budget-annuel">Budget annuel</a></nav>
+    </div>
+    <figure class="photo-frame hero-photo"><img src="exemples/assets/photo-explication-chiffres-960.webp" srcset="exemples/assets/photo-explication-chiffres-480.webp 480w, exemples/assets/photo-explication-chiffres-960.webp 960w, exemples/assets/photo-explication-chiffres-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 48px), 520px" width="1440" height="960" alt="Pierre-Yves Luminet montrant un écran lors d’un échange, photographie d’illustration." fetchpriority="high" decoding="async"></figure>
   </div>
 </section>
 <!-- ═══ POUR QUI ═══ -->
 <section class="pour-qui-section">
-  <div class="container">
+  <div class="container photo-split">
+    <figure class="photo-frame"><img src="exemples/assets/photo-echange-atelier-960.webp" srcset="exemples/assets/photo-echange-atelier-480.webp 480w, exemples/assets/photo-echange-atelier-960.webp 960w, exemples/assets/photo-echange-atelier-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 48px), 520px" width="1440" height="960" alt="Pierre-Yves Luminet en discussion dans un atelier, photographie d’illustration." loading="lazy" decoding="async"></figure>
     <div class="pour-qui-content">
       <p class="section-label">Pour qui ?</p>
       <h2 class="section-title">Cet accompagnement est fait pour vous si…</h2>
@@ -796,7 +846,8 @@ footer{background:#102C3E}
 </section>
 <!-- ═══ À PROPOS / FONDATEUR ═══ -->
 <section class="about-section" id="a-propos">
-  <div class="container">
+  <div class="container about-layout">
+    <figure class="photo-frame founder-photo"><img src="exemples/assets/photo-pierre-yves-luminet-960.webp" srcset="exemples/assets/photo-pierre-yves-luminet-480.webp 480w, exemples/assets/photo-pierre-yves-luminet-960.webp 960w" sizes="(max-width: 760px) 280px, 320px" width="960" height="1440" alt="Pierre-Yves Luminet, fondateur de Stratej OI au Port." loading="lazy" decoding="async"></figure>
     <div class="about-content">
       <p class="section-label">Le fondateur</p>
       <h2 class="about-name">Pierre-Yves Luminet</h2><p class="local-contact">Votre interlocuteur en pilotage financier, basé au Port.<br>Interventions à La Réunion, en présentiel selon la mission ou à distance.<br><a href="tel:+262693909501">06 93 90 95 01</a> · <a href="mailto:contact@stratejoi.re">contact@stratejoi.re</a></p>
@@ -810,9 +861,14 @@ footer{background:#102C3E}
 <!-- ═══ FORMULES ═══ -->
 <section class="formules" id="offres">
   <div class="container text-center">
+    <div class="offer-intro">
+      <div>
     <p class="section-label">Nos formules</p>
     <h2 class="section-title">Un accompagnement adapté à votre réalité</h2>
     <p class="section-subtitle centered">Une analyse ponctuelle pour faire le point, puis un suivi adapté à vos priorités.</p>
+      </div>
+      <figure class="photo-frame"><img src="exemples/assets/photo-echange-accompagnement-960.webp" srcset="exemples/assets/photo-echange-accompagnement-480.webp 480w, exemples/assets/photo-echange-accompagnement-960.webp 960w, exemples/assets/photo-echange-accompagnement-1440.webp 1440w" sizes="(max-width: 760px) calc(100vw - 48px), 520px" width="1440" height="960" alt="Une conversation avec Pierre-Yves Luminet autour d’une table, photographie d’illustration." loading="lazy" decoding="async"></figure>
+    </div>
     <div class="formules-grid">
       <div class="formule-card">
         <p class="formule-name">Diagnostic Flash</p><p class="formule-type">Ponctuel</p>
@@ -955,13 +1011,17 @@ footer{background:#102C3E}
   </div>
 </section>
 <!-- ═══ CTA FINAL ═══ -->
-<section class="cta-final">
-  <div class="container">
+<section class="cta-final" id="contact">
+  <div class="container contact-layout">
+    <figure class="photo-frame contact-photo"><img src="exemples/assets/photo-pierre-yves-ecoute-960.webp" srcset="exemples/assets/photo-pierre-yves-ecoute-480.webp 480w, exemples/assets/photo-pierre-yves-ecoute-960.webp 960w" sizes="(max-width: 760px) 280px, 320px" width="960" height="1440" alt="Pierre-Yves Luminet abaissant son ordinateur et regardant son interlocuteur." loading="lazy" decoding="async"></figure>
+    <div class="contact-copy">
+    <p class="section-label">Parlons de votre activité</p>
     <h2>Prêt à reprendre le contrôle<br>de vos finances ?</h2>
     <p>30 minutes d'échange gratuit pour faire le point sur votre situation.</p>
     <a href="https://meet.brevo.com/pierre-yves-luminet/echange-decouverte-stratej-oi" class="btn-primary">Réservez votre échange découverte</a>
     <div class="cta-rappel">
       <a href="https://e4c8f929.sibforms.com/serve/MUIFAPl-OtPAEfAAxdNqc3Kooujk9YRNtNR34lTVqy3slcq_tOsokUYkE4zxZlXJnkSdT8pgETYB_W4Vz3eh2dqEqhseSJqWjWIX22MIdG0Tza6Jt5vLU4ujxQ77X0BsxHRBChkjFYWWIX1WO-2WIj8kS7FNA72AZt7cXgvgyO2HEFQ55SExOjosVwaCR39wfHWM0p8kqpdMgmvvMA==" target="_blank" rel="noopener">Vous préférez qu'on vous rappelle ? Laissez vos coordonnées ici.</a>
+    </div>
     </div>
   </div>
 </section>
